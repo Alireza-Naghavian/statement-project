@@ -5,10 +5,10 @@ import {
 } from "@mui/material-nextjs/v13-pagesRouter";
 export default function Document({ props }) {
   return (
-    <Html lang="en">
+    <Html lang="fa" dir="rtl">
       <Head />
       <DocumentHeadTags {...props} />
-      <body>
+      <body >
         <Main />
         <NextScript />
       </body>
