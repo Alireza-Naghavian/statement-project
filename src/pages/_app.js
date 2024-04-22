@@ -1,3 +1,7 @@
+import Footer from "@/components/ui/Footer";
+import Header from "@/components/ui/Header";
+import RealTor from "@/components/ui/RealTor";
+import SideBar from "@/components/ui/SideBar";
 import "@/styles/globals.css";
 import { AppCacheProvider } from "@mui/material-nextjs/v13-pagesRouter";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
@@ -58,14 +62,19 @@ const theme = createTheme({
         },
       },
     },
-   
   },
 });
 export default function App({ Component, pageProps }) {
   return (
     <AppCacheProvider {...pageProps}>
       <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
+        <div className="container">
+          <SideBar />
+          <Header />
+          <RealTor />
+          <Component {...pageProps} />
+          <Footer />
+        </div>
       </ThemeProvider>
     </AppCacheProvider>
   );

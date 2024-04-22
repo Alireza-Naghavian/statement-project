@@ -1,9 +1,5 @@
 import HomeCard from "@/components/modules/homeCard/HomeCard";
-import Footer from "@/components/ui/Footer";
-import Header from "@/components/ui/Header";
 import MultipleSelection from "@/components/ui/MultipleSelection";
-import RealTor from "@/components/ui/RealTor";
-import SideBar from "@/components/ui/SideBar";
 import TextFiled from "@/components/ui/TextFiled";
 import React from "react";
 function AllHomes() {
@@ -59,16 +55,15 @@ function AllHomes() {
   ];
   return (
     <>
-      <div className="container">
-        <SideBar />
-        <Header />
-        <RealTor />
+      <HomeCard homeDatas={homeDatas}>
+        <div class="home-filter-search">
+          <div class="home-filter">
+            <MultipleSelection />
+          </div>
 
-     
-
-        <HomeCard homeDatas={homeDatas} />
-        <Footer />
-      </div>
+          <TextFiled />
+        </div>
+      </HomeCard>
     </>
   );
 }

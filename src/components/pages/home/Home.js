@@ -9,7 +9,7 @@ function HomePage({homeDatas}) {
     <>
       <MainSlogen />
       <Story_section />
-
+    
       <HomeCard homeDatas={homeDatas} />
     </>
   );
