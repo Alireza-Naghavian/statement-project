@@ -806,3 +806,50 @@ body {
   }
 }
 
+.home-section {
+  grid-column: center-start / center-end;
+  margin: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.homes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  grid-gap: 3rem;
+}
+
+.home-filter-search {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  width: 85%;
+}
+
+.home-filter {
+  width: 30%;
+}
+
+.home-filter select {
+  width: 100%;
+  padding: 1rem;
+  outline: none;
+  border: 1px solid #aaa;
+  font-family: inherit;
+  border-radius: 3px;
+}
+
+
+
+.home-search input {
+  font-family: inherit;
+  padding: 1rem;
+  width: 100%;
+  outline: none;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  margin-top: 24px;
+  margin-right: 160px;
+  margin-bottom: 40px;
+}

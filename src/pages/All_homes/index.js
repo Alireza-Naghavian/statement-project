@@ -1,9 +1,12 @@
-import HomePage from "@/components/pages/home/Home";
-import SideBar from "@/components/ui/SideBar";
-import Header from "@/components/ui/Header";
-import RealTor from "@/components/ui/RealTor";
+import HomeCard from "@/components/modules/homeCard/HomeCard";
 import Footer from "@/components/ui/Footer";
-export default function Home() {
+import Header from "@/components/ui/Header";
+import MultipleSelection from "@/components/ui/MultipleSelection";
+import RealTor from "@/components/ui/RealTor";
+import SideBar from "@/components/ui/SideBar";
+import TextFiled from "@/components/ui/TextFiled";
+import React from "react";
+function AllHomes() {
   const homeDatas = [
     {
       id: 1,
@@ -56,13 +59,18 @@ export default function Home() {
   ];
   return (
     <>
-    <div className="container">
-      <SideBar />
-      <Header />
-      <RealTor />
-      <HomePage homeDatas={homeDatas} />
-      <Footer />
-    </div>
+      <div className="container">
+        <SideBar />
+        <Header />
+        <RealTor />
+
+     
+
+        <HomeCard homeDatas={homeDatas} />
+        <Footer />
+      </div>
     </>
   );
 }
+
+export default AllHomes;

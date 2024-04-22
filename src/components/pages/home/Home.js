@@ -4,13 +4,13 @@ import Story_section from "../../ui/homepage/Story_section";
 import HomeCard from "@/components/modules/homeCard/HomeCard";
 import Container from "@mui/material/Container";
 
-function HomePage() {
+function HomePage({homeDatas}) {
   return (
     <>
       <MainSlogen />
       <Story_section />
 
-      <HomeCard />
+      <HomeCard homeDatas={homeDatas} />
     </>
   );
 }
