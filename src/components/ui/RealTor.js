@@ -4,12 +4,12 @@ function RealTor() {
   const bestRealTor = [
     {
       id: 1,
-      avatarSrc: "img/realtor-1.jpeg",
+      avatarSrc: "/img/realtor-1.jpeg",
       name: "مهدی ایلخانی نسب",
       sell: 869,
     },
-    { id: 2, avatarSrc: "img/realtor-2.jpeg", name: "کوثر بهشتی", sell: 243 },
-    { id: 3, avatarSrc: "img/realtor-3.jpeg", name: "ارشیا حسینی", sell: 130 },
+    { id: 2, avatarSrc: "/img/realtor-2.jpeg", name: "کوثر بهشتی", sell: 243 },
+    { id: 3, avatarSrc: "/img/realtor-3.jpeg", name: "ارشیا حسینی", sell: 130 },
   ];
   return (
     <Box className="real-tors" >
