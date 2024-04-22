@@ -38,7 +38,7 @@ function Footer() {
 
       <p className="copyright">
          &copy;   حقوق مادی معنوی این سایت برای&nbsp;
-        <strong className="copyright__name">مهدی ایلخانی نسب </strong>
+        <strong className="copyright__name">علی رضا نقویان </strong>
         محفوظ میباشد  
       </p>
     </footer>

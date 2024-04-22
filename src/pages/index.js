@@ -5,6 +5,7 @@ import RealTor from "@/components/ui/RealTor";
 import Footer from "@/components/ui/Footer";
 export default function Home() {
   return (
+    <>
     <div className="container">
       <SideBar />
       <Header />
@@ -12,5 +13,6 @@ export default function Home() {
       <HomePage />
       <Footer />
     </div>
+    </>
   );
 }

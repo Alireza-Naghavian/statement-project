@@ -9,7 +9,7 @@ function SideBar() {
         name="toggle"
         id="sidebar-toggle"
         className="sidebar__input"/>
-      <label for="sidebar-toggle" className="sidebar__label">
+      <label htmlFor="sidebar-toggle" className="sidebar__label">
         <div className="sidebar__btn"></div>
       </label>
 

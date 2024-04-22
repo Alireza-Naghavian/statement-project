@@ -24,6 +24,42 @@ const theme = createTheme({
       "2xl": 1440,
     },
   },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "#c69963",
+          width: "20rem",
+          height: "5rem",
+          outline: "none",
+          border: "none",
+          borderRadius: "0px",
+          fontFamily: "Dana-Bold",
+          fontSize: "1.6rem",
+          transition: "all .4s",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          textDecoration: "none",
+          "&:hover": {
+            backgroundColor: "#b28451",
+          },
+        },
+      },
+    },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "#f9f7f6",
+          display: "grid",
+          gridTemplateColumns: "repeat(1, 1fr)",
+          position: "relative",
+          gridRowGap: "3rem",
+        },
+      },
+    },
+   
+  },
 });
 export default function App({ Component, pageProps }) {
   return (
