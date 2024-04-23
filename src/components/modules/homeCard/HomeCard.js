@@ -5,11 +5,9 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActions, Grid } from "@mui/material";
 import Box from "@mui/material/Box";
-import db from "../../../../data/db.json";
 import { useRouter } from "next/router";
-function HomeCard({children}) {
+function HomeCard({children,homes}) {
   const {push} = useRouter();
-
   return (
     <Box
       component={"section"}
@@ -30,8 +28,8 @@ function HomeCard({children}) {
         alignContent="stretch"
         wrap="wrap"
       >
-        {db.homes &&
-          db.homes.map((home) => {
+        {homes &&
+          homes.map((home) => {
             return (
               <Grid
                 key={home.id}
