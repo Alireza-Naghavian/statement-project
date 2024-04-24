@@ -18,7 +18,7 @@ function HomeCard({children,homes}) {
         mb: "30px",
       }}
     >
-{children}
+{children && children[0]}
       <Grid
         container
         spacing={2}
@@ -99,6 +99,7 @@ function HomeCard({children,homes}) {
               </Grid>
             );
           })}
+          {children && children[1]}
       </Grid>
     </Box>
   );
