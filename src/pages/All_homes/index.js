@@ -2,7 +2,6 @@ import HomeCard from "@/components/modules/homeCard/HomeCard";
 import MultipleSelection from "@/components/ui/MultipleSelection";
 import TextFiled from "@/components/ui/TextFiled";
 import React, { useEffect, useState } from "react";
-import db from "../../../data/db.json";
 import { useSort } from "@/contexts/SortProvider";
 function AllHomes() {
   const [serach, setSearch] = useState("");
