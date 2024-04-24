@@ -948,3 +948,16 @@ body {
 .home-details-description p:last-child{
   text-align: justify;
 }
+
+.pagination__item li button{
+  background-color: var(--color-primary);
+}
+.mui-1idgk4h-MuiButtonBase-root-MuiPaginationItem-root{
+  font-size: 14px !important;
+
+}
+.mui-1idgk4h-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected{
+  background-color:var(--color-gray-light-2)!important;
+  color: white !important;
+}
+
