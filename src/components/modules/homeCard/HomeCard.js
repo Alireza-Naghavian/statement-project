@@ -5,9 +5,9 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActions, Grid } from "@mui/material";
 import Box from "@mui/material/Box";
-import MultipleSelection from "@/components/ui/MultipleSelection";
-import TextFiled from "@/components/ui/TextFiled";
-function HomeCard({homeDatas}) {
+import { useRouter } from "next/router";
+function HomeCard({children,homes}) {
+  const {push} = useRouter();
   return (
     <Box
       component={"section"}
@@ -18,14 +18,7 @@ function HomeCard({homeDatas}) {
         mb: "30px",
       }}
     >
-         <div class="home-filter-search">
-          <div class="home-filter">
-            <MultipleSelection />
-          </div>
-        
-            <TextFiled />
-          
-        </div>
+{children}
       <Grid
         container
         spacing={2}
@@ -35,8 +28,8 @@ function HomeCard({homeDatas}) {
         alignContent="stretch"
         wrap="wrap"
       >
-        {homeDatas &&
-          homeDatas.map((home) => {
+        {homes &&
+          homes.map((home) => {
             return (
               <Grid
                 key={home.id}
@@ -54,12 +47,12 @@ function HomeCard({homeDatas}) {
                   <CardMedia
                     component="img"
                     height="240"
-                    image="img/gal-2.jpeg"
+                    image={home.img}
                     alt="green iguana"
                   />
                   <CardContent sx={{ m: "auto", fontFamily: "Dana-Bold" }}>
                     <Typography gutterBottom variant="h5" component="div">
-                      <h5 className="card__title">{home.cat}</h5>
+                      <h5 className="card__title">{home.title}</h5>
                     </Typography>
                     <Typography variant="div" color="text.secondary">
                       <Grid
@@ -75,14 +68,14 @@ function HomeCard({homeDatas}) {
                           <p className="card__text">{home.citry}</p>
                         </Grid>
                         <Grid item xs={6}>
-                          <p className="card__text">{home.room} اتاق</p>
+                          <p className="card__text">{home.roomCount} اتاق</p>
                         </Grid>
                         <Grid item xs={6}>
-                          <p className="card__text">{home.width} متر مربع</p>
+                          <p className="card__text">{home.meterage} متر مربع</p>
                         </Grid>
                         <Grid item xs={6}>
                           <p className="card__text">
-                            {home.price} میلیون تومان
+                            {home.price.toLocaleString()} میلیون تومان
                           </p>
                         </Grid>
                       </Grid>
@@ -91,6 +84,7 @@ function HomeCard({homeDatas}) {
 
                   <CardActions>
                     <Button
+                    onClick={()=>push(`All_homes/${home.id}`)}
                       sx={{
                         width: 1,
                         color: "white",
